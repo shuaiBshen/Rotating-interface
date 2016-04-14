@@ -36,7 +36,7 @@
 
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
-    
+    NSLog(@"加载完成");
 }
 
 - (IBAction)touch:(id)sender {
