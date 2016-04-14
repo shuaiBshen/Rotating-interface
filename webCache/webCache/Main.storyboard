@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Web View Controller-->
+        <scene sceneID="eUw-Fu-dHs">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="Ydk-GZ-837" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lZD-dF-G2L"/>
+                        <viewControllerLayoutGuide type="bottom" id="rfq-ID-joN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vPI-Xw-Btq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LHN-aS-zP9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Ydk-GZ-837" id="YwY-KY-VJj"/>
+                                </connections>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCE-Cr-8Pq">
+                                <rect key="frame" x="0.0" y="152" width="320" height="416"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="点击旋转">
+                                    <color key="titleColor" red="1" green="0.85211555370000003" blue="0.43752891999999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="touch:" destination="Ydk-GZ-837" eventType="touchUpInside" id="FEh-Qj-bXB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rfq-ID-joN" firstAttribute="top" secondItem="sCE-Cr-8Pq" secondAttribute="bottom" id="5EM-84-BWK"/>
+                            <constraint firstAttribute="trailing" secondItem="LHN-aS-zP9" secondAttribute="trailing" id="FIW-Ji-bZy"/>
+                            <constraint firstItem="rfq-ID-joN" firstAttribute="top" secondItem="LHN-aS-zP9" secondAttribute="bottom" id="Xnu-t7-2r5"/>
+                            <constraint firstItem="LHN-aS-zP9" firstAttribute="top" secondItem="vPI-Xw-Btq" secondAttribute="top" id="Yep-zj-C18"/>
+                            <constraint firstAttribute="trailing" secondItem="sCE-Cr-8Pq" secondAttribute="trailing" id="iAQ-kT-3XQ"/>
+                            <constraint firstItem="sCE-Cr-8Pq" firstAttribute="top" secondItem="lZD-dF-G2L" secondAttribute="bottom" constant="132" id="pLa-XD-R5T"/>
+                            <constraint firstItem="LHN-aS-zP9" firstAttribute="leading" secondItem="vPI-Xw-Btq" secondAttribute="leading" id="xva-Vd-5qu"/>
+                            <constraint firstItem="sCE-Cr-8Pq" firstAttribute="leading" secondItem="vPI-Xw-Btq" secondAttribute="leading" id="zf7-F7-RFx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="LHN-aS-zP9" id="L1o-m0-ODn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ori-cS-XWr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="146" y="28"/>
+        </scene>
+    </scenes>
+</document>
